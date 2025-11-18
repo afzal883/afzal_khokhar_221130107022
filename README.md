@@ -1,7 +1,3 @@
-Here is the **direct plain text** version (no formatting issues) — just copy-paste into your GitHub README.md:
-
----
-
 # Perfume E-Commerce Platform — Full Stack (Next.js + Django)
 
 ## Overview
@@ -256,7 +252,3 @@ Password: Admin@123
 * JWT stored in HttpOnly cookies
 * Backend must allow CORS from frontend domain
 * Images stored in /media/
-
----
-
-If you want this in **Markdown style**, **PDF**, **DOCX**, or **beautified README**, just tell me.
