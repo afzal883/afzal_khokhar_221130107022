@@ -41,30 +41,7 @@ This is a full-stack perfume e-commerce web application built using Next.js for 
 
 ## Database
 
-* PostgreSQL (recommended)
-* SQLite (for development)
-
----
-
-# Project Structure
-
-Frontend:
-
-* /frontend/app
-* /frontend/components
-* /frontend/store
-* /frontend/utils
-* /frontend/public
-
-Backend:
-
-* /backend/config
-* /backend/users
-* /backend/products
-* /backend/orders
-* /backend/cart
-* /backend/wishlist
-* /backend/invoices
+* PostgreSQL
 
 ---
 
@@ -113,14 +90,6 @@ EMAIL_PORT=587
 
 ---
 
-# Database Configuration (PostgreSQL)
-
-CREATE DATABASE perfume_db;
-CREATE USER perfume_user WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE perfume_db TO perfume_user;
-
----
-
 # Migrations
 
 python manage.py makemigrations
@@ -155,7 +124,7 @@ npm install
 
 # Frontend Environment Variables
 
-Create `.env.local` in `/frontend/`:
+Create .env.local in /frontend/:
 
 NEXT_PUBLIC_API_URL=[http://127.0.0.1:8000/api](http://127.0.0.1:8000/api)
 NEXTAUTH_SECRET=your_secret_key
@@ -171,80 +140,8 @@ Frontend: [http://localhost:3000](http://localhost:3000)
 
 # Testing Instructions
 
-Backend tests:
-python manage.py test
-
-Frontend tests (if used):
-npm run test
-
 API testing:
 Use Postman
-Swagger Docs: /api/docs/
-
----
-
-# API Summary
-
-Authentication:
-POST /api/auth/register/
-POST /api/auth/login/
-POST /api/auth/logout/
-GET /api/auth/profile/
-PUT /api/auth/profile/
-
-Products:
-GET /api/products/
-GET /api/products/<id>/
-
-Cart:
-GET /api/cart/
-POST /api/cart/add/
-DELETE /api/cart/remove/<id>/
-
-Wishlist:
-GET /api/wishlist/
-POST /api/wishlist/add/
-DELETE /api/wishlist/remove/<id>/
-
-Orders:
-POST /api/orders/create/
-GET /api/orders/
-GET /api/orders/<id>/invoice/
-
----
-
-# Frontend Routes
-
-/
-/products
-/product/[id]
-/cart
-/wishlist
-/checkout
-/orders
-/login
-/register
-/admin
-/admin/products
-/admin/orders
-
----
-
-# Deployment URLs (replace with your URLs)
-
-Frontend (Vercel): [https://perfume-shop.vercel.app](https://perfume-shop.vercel.app)
-Backend (Render/EC2): [https://perfume-api.onrender.com](https://perfume-api.onrender.com)
-Swagger Docs: [https://perfume-api.onrender.com/api/docs](https://perfume-api.onrender.com/api/docs)
-Admin Panel: [https://perfume-api.onrender.com/admin](https://perfume-api.onrender.com/admin)
-
----
-
-# Admin Credentials (For Evaluation)
-
-Admin Email: [admin@perfume.com](mailto:admin@perfume.com)
-Password: Admin@123
-
----
 
 # Notes
 
@@ -252,3 +149,5 @@ Password: Admin@123
 * JWT stored in HttpOnly cookies
 * Backend must allow CORS from frontend domain
 * Images stored in /media/
+
+---
